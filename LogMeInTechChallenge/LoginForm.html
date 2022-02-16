@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+                <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+                    <link rel="stylesheet" type="text/css" href="Login.css" />
+    </head>
+<body style="background-color:orange;">
+
+        <h1 style = "padding: 10px;color:Blue;font-size:30px;">Login-Me-InTech</h1>
+        <div class="container">
+                <div class="inputContainer">
+                   <input class="style" placeholder="Enter User Name" type="text" id="userid"></input>
+                   <input class="style" placeholder="Enter Password" type="password" id="password"></input>
+                  <div class="sumbitButtons">             
+                      <button type="submit" class="style" onclick="submituserdata()">Login</button>
+                  </div>
+                </div>              
+              </div>
+    <script>
+        function submituserdata() {
+                   var userid = document.getElementById("userid").value;
+                   var password = document.getElementById("password").value;
+                   var value = {"userid":userid , "password":password}
+                   try {
+                       webkit.messageHandlers.loginWebView.postMessage(value);
+
+               } catch(err) {
+                       console.log('error');
+                    }
+               }
+    </script>
+
+</body>
+</html> 

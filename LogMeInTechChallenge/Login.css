@@ -1,0 +1,23 @@
+
+input.style {
+    background-color: whitesmoke;
+    width: 80%;
+    height: 25px;
+    border-radius: 35px;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+button.style {
+    width: 60%;
+    height: 50px;
+    background-color:blue;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 35px;
+    color: white;
+    font-size: 20px;
+}
