@@ -1,4 +1,4 @@
-# LogMe In Tech Challenge App.
+# Log-Me-In Tech Challenge App.
 
 Built in Swift.
 
