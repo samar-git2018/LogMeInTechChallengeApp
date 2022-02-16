@@ -33,12 +33,13 @@ class WebViewController: UIViewController , UIWebViewDelegate  {
                 let cookieExpiredTime = cookies!.expiresDate
                 print(cookies!.expiresDate!)
                 let currentDate = Date()
-                
+                // Delete user credential from keychain if keychain data age is more than 2 hours
                 if hourDifference(from: cookies!.expiresDate!, to: currentDate)   > 2
                 {
                     KeyChain.delete(key: "UserCredential")
                 }
-                else{
+                else
+                {
                     let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                     self.navigationController?.pushViewController(homeVC, animated: true)
                 }
