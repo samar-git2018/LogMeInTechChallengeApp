@@ -161,6 +161,10 @@ extension WebViewController : WKScriptMessageHandler {
                         }
                     }
                 }
+                 else
+                {
+                    print("Wrong user credential")
+                }
             } catch {
                 print(error)
             }
